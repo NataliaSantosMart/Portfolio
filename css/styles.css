@@ -392,21 +392,6 @@ body {
     resize: vertical;
 }
 
-.formulario-contacto button {
-    padding: 0.75rem;
-    background-color: #9333EA;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.formulario-contacto button:hover {
-    background-color: #a45fe5;
-}
-
 .contacto-description {
     text-align: center;
     margin-bottom: 1rem;
@@ -475,4 +460,49 @@ nav {
 
 .navbar-links a:hover {
   color: #9333EA;
+}
+
+
+
+
+.boton {
+    display: inline-block;
+    background-color: #000000; 
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    border: none; 
+    outline: none; 
+    font-family: 'Tahoma', sans-serif !important; 
+    font-style: normal !important;
+}
+
+.boton:hover {
+    transform: translateY(-8px); 
+}
+
+.boton-send {
+    display: inline-block;
+    background-color: #9333EA; 
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    border: none; 
+    outline: none; 
+    font-family: 'Tahoma', sans-serif !important; 
+    font-style: normal !important;
+}
+
+.boton-send:hover {
+    background-color: #b382e0;
 }
