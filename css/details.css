@@ -1,0 +1,214 @@
+
+
+body {
+    font-family: 'Tahoma', sans-serif !important; 
+    background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)), url('../images/background.svg');
+    color: #1F2937;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+
+}
+
+.detalle-proyecto {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 150px auto;
+    transition: transform 0.3s ease;
+}
+
+.detalle-proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.detalle-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    background-clip: text;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.detalle-video {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.video-proyecto {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.75;
+    text-align: justify;
+}
+
+.section-video {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.detalle-imagen {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.img-proyecto {
+    width: 100%;
+    max-width: 800px;
+}
+
+.img-proyecto-movil {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tarjetas-tecnologias {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-tecnologia {
+    background-color: #ebebeb;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #1F2937;
+    cursor: pointer;
+}
+
+.tarjeta-tecnologia:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-tecnologia p {
+    font-size: 0.8rem;
+    color: #3e3e3e;
+    font-weight: 600;
+    margin: 0;
+}
+
+.documentos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #9333EA; 
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    border: none; 
+    outline: none; 
+    font-family: 'Arial', sans-serif;
+    font-style: normal !important;
+}
+
+.boton:hover {
+    transform: translateY(-8px); 
+}
+
+
+.github-link-top, .github-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: -90px;
+    padding-right: 30px;
+}
+
+.boton-icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #24292e;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-icono:hover {
+    background-color: #444d56;
+    transform: translateY(-3px);
+}
+
+.boton-icono i {
+    margin: 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+  }
+  
+  .navbar-links a {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-left: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #9333EA;
+  }
+  

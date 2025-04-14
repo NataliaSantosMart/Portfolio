@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="description" content="SpendTogether es una aplicación web para facilitar la búsqueda de habitaciones en alquiler y compañeros de piso en España.">
+    <meta name="author" content="Tu Nombre">
+    <meta name="keywords" content="SpendTogether, aplicación web, búsqueda de habitaciones, alquiler, compañeros de piso, tecnología">
+    <title>SpendTogether - Proyecto</title>
+    <link rel="stylesheet" id="dynamic-css">
+    <script>
+        const timestamp = Date.now(); 
+        document.getElementById('dynamic-css').setAttribute('href', `../css/details.css?v=${timestamp}`);
+        
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Sección SpendTogether -->
+    <div id="SpendTogether" class="detalle-proyecto">
+        <div class="github-link-top">
+            <a href="https://github.com/NataliaSantosMart/DispositosMoviles" target="_blank" class="boton-icono">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <h3 class="detalle-titulo">SpendTogether</h3>
+        <img src="../images/SpendTogether.png" class="img-proyecto-movil" />
+
+        <!-- Descripción -->
+        <div class="section">
+            <h4>Descripción</h4>
+            <p>
+                SpendTogether es una aplicación móvil nativa para Android diseñada para facilitar la gestión de gastos compartidos en diversas situaciones cotidianas. La necesidad de gestionar gastos compartidos de manera equitativa es un reto común en actividades grupales, como viajes, cenas, regalos colectivos y eventos sociales. En muchos casos, la falta de claridad en la distribución de los pagos puede generar confusión y conflictos entre los participantes. SpendTogether surge como una solución eficaz que permite registrar y dividir los gastos de manera justa y transparente, evitando malentendidos y reduciendo la carga administrativa de los usuarios. <br></br>
+
+La aplicación permite a los usuarios registrar, categorizar y compartir los gastos de actividades grupales de manera sencilla, automatizando el cálculo de las contribuciones individuales para garantizar una distribución justa de los costos. Además, proporciona un registro claro y detallado de los gastos y las contribuciones de cada usuario, asegurando visibilidad total sobre las transacciones.
+            </p>
+            
+        </div>
+
+        <!-- Tecnologías Utilizadas -->
+        <div class="section">
+            <h4>Tecnologías Utilizadas</h4>
+            <div class="tarjetas-tecnologias">
+                <div class="tarjeta-tecnologia">
+                    <p>Android Studio</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>Kotlin</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>Retrofit</p>
+                </div> 
+                <div class="tarjeta-tecnologia">
+                    <p>JSON Server</p>
+                </div>  
+                <div class="tarjeta-tecnologia">
+                    <p>XML</p>
+                </div>    
+                 <div class="tarjeta-tecnologia">
+                    <p>Figma</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Documentación -->
+        <div class="section">
+            <h4>Documentación del Proyecto</h4>
+            <p>En esta sección podrás descargar la memoria técnica en formato PDF. Haz clic en el enlace para obtener el archivo correspondiente.</p>
+            <div class="documentos">
+                <a href="../files/MemoriaSpendTogether.pdf" class="boton" download>
+                    <i class="fas fa-file-pdf"></i> Descargar Documentación (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../languages/lang.js"></script>
+    <script src="../languages/script.js"></script>
+</body>
+</html>

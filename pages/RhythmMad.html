@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="description" content="RhythmMad es una aplicación web para facilitar la búsqueda de habitaciones en alquiler y compañeros de piso en España.">
+    <meta name="author" content="Tu Nombre">
+    <meta name="keywords" content="RhythmMad, aplicación web, búsqueda de habitaciones, alquiler, compañeros de piso, tecnología">
+    <title>RhythmMad - Proyecto</title>
+    <link rel="stylesheet" id="dynamic-css">
+    <script>
+        const timestamp = Date.now(); 
+        document.getElementById('dynamic-css').setAttribute('href', `../css/details.css?v=${timestamp}`);
+        
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Sección RhythmMad -->
+    <div id="RhythmMad" class="detalle-proyecto">
+        <div class="github-link-top">
+            <a href="https://github.com/NataliaSantosMart/RhythmMad" target="_blank" class="boton-icono">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <h3 class="detalle-titulo">RhythmMad</h3>
+        <img src="../images/RhythmMad.png" class="img-proyecto-movil" />
+
+        <!-- Descripción -->
+        <div class="section">
+            <h4>Descripción</h4>
+            <p>
+                Este proyecto representa una aplicación móvil utilizando React Native, diseñada para proporcionar información actualizada sobre eventos en la ciudad de Madrid. Su objetivo principal es facilitar la búsqueda y visualización de eventos como conciertos, exposiciones, conferencias y actividades culturales, brindando una experiencia fluida e intuitiva a los usuarios. <br></br>
+
+Además de funcionalidades básicas de navegación y visualización de datos, la aplicación incorpora características avanzadas como la posibilidad de agregar nuevos eventos a la base de datos Firebase, así como acceder a información detallada de cada evento.
+            </p>
+            
+        </div>
+
+        <!-- Tecnologías Utilizadas -->
+        <div class="section">
+            <h4>Tecnologías Utilizadas</h4>
+            <div class="tarjetas-tecnologias">
+                <div class="tarjeta-tecnologia">
+                    <p>React Native</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>JavaScript</p>
+                </div> 
+                <div class="tarjeta-tecnologia">
+                    <p>JSON</p>
+                </div>  
+                <div class="tarjeta-tecnologia">
+                    <p>Firebase</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>CSS</p>
+                </div>    
+                 <div class="tarjeta-tecnologia">
+                    <p>Figma</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Documentación -->
+        <div class="section">
+            <h4>Documentación del Proyecto</h4>
+            <p>En esta sección podrás descargar la memoria técnica en formato PDF. Haz clic en el enlace para obtener el archivo correspondiente.</p>
+            <div class="documentos">
+                <a href="../files/MemoriaRhythmMad.pdf" class="boton" download>
+                    <i class="fas fa-file-pdf"></i> Descargar Documentación (PDF)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../languages/lang.js"></script>
+    <script src="../languages/script.js"></script>
+
+</body>
+</html>

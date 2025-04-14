@@ -3,50 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
     <title>Portafolio de Desarrollador Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" id="dynamic-css">
+    <script>
+        const timestamp = Date.now(); 
+        document.getElementById('dynamic-css').setAttribute('href', `css/styles.css?v=${timestamp}`);
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <header class="bg-blue-500 text-white p-6 shadow-lg">
-        <h1 class="text-4xl font-bold">Tu Nombre</h1>
-        <p class="text-lg">Desarrollador Web | Frontend & Backend</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    
+
+    <!-- Hero Section -->
+    <header class="hero-section w-full h-screen bg-gradient-to-br flex flex-col justify-center items-center text-center p-6 text-black">
+        <img src="images/nataliaPhoto.jpg" alt="Foto de Natalia" class="w-48 h-48 object-cover rounded-full mb-5">
+        <h1 class="text-5xl font-bold mb-2">Natalia Santos Martínez</h1>
+        <p class="text-xl mb-4" data-i18n="job_title"></p>
+        <a href="#proyectos" class="project-btn-custom" data-i18n="see_projects">
+            <i class="fas fa-folder-open" ></i> Ver Proyectos
+        </a>
     </header>
 
-    <main class="p-6 max-w-4xl mx-auto">
-        <section class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Proyectos Destacados</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white p-4 shadow rounded-lg">
-                    <h3 class="text-xl font-bold">Proyecto 1</h3>
-                    <p class="text-gray-600">Breve descripción del proyecto.</p>
-                    <a href="#" class="text-blue-500 hover:underline">Ver Proyecto</a>
-                </div>
-                <div class="bg-white p-4 shadow rounded-lg">
-                    <h3 class="text-xl font-bold">Proyecto 2</h3>
-                    <p class="text-gray-600">Breve descripción del proyecto.</p>
-                    <a href="#" class="text-blue-500 hover:underline">Ver Proyecto</a>
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="sobre-mi-section py-16 px-6 bg-white">
+        <h2 class="section-title text-2xl font-bold text-center mb-8" data-i18n="about_me"></h2>
+        <div class="sobre-mi-content flex flex-wrap justify-center gap-8">
+            <div class="columna izquierda max-w-md w-full">
+                <h5 class="subsubsection-title text-xl font-semibold text-center mb-4" data-i18n="get_to_know_me"></h5>
+                <div class="sobre-mi-text text-base text-gray-700 text-justify"  data-i18n-html="about_me_text">
                 </div>
             </div>
+
+            <div class="columna izquierda max-w-md w-full">
+                <h5 class="subsubsection-title text-xl font-semibold text-center mb-4" data-i18n="my_skills"></h5>
+                <div class="tarjetas-tecnologias flex flex-wrap justify-center gap-4">
+                    <div class="tarjetas-tecnologias">
+                        <div class="tarjeta-tecnologia">Java</div>
+                        <div class="tarjeta-tecnologia">Spring Boot & Spring Security</div>
+                        <div class="tarjeta-tecnologia">JSF & Primefaces</div>
+                        <div class="tarjeta-tecnologia">NodeJS</div>
+                        <div class="tarjeta-tecnologia">C#</div>
+                        <div class="tarjeta-tecnologia">ASP.NET</div>
+                        <div class="tarjeta-tecnologia">Laravel</div>
+                        <div class="tarjeta-tecnologia">Kotlin</div>
+                        <div class="tarjeta-tecnologia">HTML & CSS</div>
+                        <div class="tarjeta-tecnologia">JavaScript</div>
+                        <div class="tarjeta-tecnologia">TypeScript</div>
+                        <div class="tarjeta-tecnologia">React & React Native</div>
+                        <div class="tarjeta-tecnologia">Angular</div>
+                        <div class="tarjeta-tecnologia">SQL</div>
+                        <div class="tarjeta-tecnologia">MySQL</div>
+                        <div class="tarjeta-tecnologia">PostgreSQL</div>
+                        <div class="tarjeta-tecnologia">SQL Server</div>
+                        <div class="tarjeta-tecnologia">Oracle</div>
+                        <div class="tarjeta-tecnologia">MongoDB</div>
+                        <div class="tarjeta-tecnologia">Firebase</div>
+                        <div class="tarjeta-tecnologia">Docker</div>    
+                    <!-- Más habilidades -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <main class="main-content py-16 px-6 bg-gray-100">
+        <section id="proyectos" class="proyectos-section">
+            <h2 class="section-title text-2xl font-bold text-center mb-8" data-i18n="projects"></h2>
+
+            <section id="aplicaciones-web" class="mb-12">
+                <h3 class="subsection-title text-xl font-semibold text-center mb-6" data-i18n="web_applications"></h3>
+                <div class="project-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                    <a href="pages/HomeMate.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/HomeMate.png" alt="HomeMate" class="w-full rounded-lg">
+                            <div class="project-info">
+                                <h3>HomeMate</h3>
+                                <p data-i18n="homemate_description"></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/BiblioConnect.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/Biblioconnect.png" alt="BiblioConnect" class="w-full rounded-lg">
+                            <div class="project-info">
+                                <h3>BiblioConnect</h3>
+                                <p data-i18n="biblioconnect_description"></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/SportPower.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/SportPower.png" alt="SportPower" class="w-full rounded-lg">
+                            <div class="project-info">
+                                <h3>SportPower</h3>
+                                <p data-i18n="sportpower_description"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="aplicaciones-moviles">
+                <h3 class="subsection-title text-xl font-semibold text-center mb-6" data-i18n="mobile_applications"></h3>
+                <div class="project-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                   
+                    <a href="pages/SpendTogether.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/SpendTogether.png" alt="SpendTogether" class="w-1/3 mx-auto">
+                            <div class="project-info">
+                                <h3>SpendTogether</h3>
+                                <p data-i18n="spendtogether_description"></p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="pages/RhythmMad.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/RhythmMad.png" alt="RhythmMad" class="w-1/3 mx-auto">
+                            <div class="project-info">
+                                <h3>RhythmMad</h3>
+                                <p data-i18n="rhythmmad_description"></p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pages/GetPet.html" class="project-card-link">
+                        <div class="project-card">
+                            <img src="images/GetPet.png" alt="GetPet" class="w-1/3 mx-auto">
+                            <div class="project-info">
+                                <h3>GetPet</h3>
+                                <p data-i18n="getpet_description"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </section>
 
-        <section class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Sobre Mí</h2>
-            <p>Soy un desarrollador web apasionado por crear soluciones elegantes y eficientes.</p>
-        </section>
-
-        <section class="my-8">
-            <h2 class="text-2xl font-semibold mb-4">Contacto</h2>
-            <p>Puedes encontrarme en:</p>
-            <ul class="list-disc list-inside">
-                <li><a href="#" class="text-blue-500 hover:underline">LinkedIn</a></li>
-                <li><a href="#" class="text-blue-500 hover:underline">GitHub</a></li>
-                <li><a href="mailto:tucorreo@example.com" class="text-blue-500 hover:underline">Email</a></li>
-            </ul>
+        <!-- Contacto -->
+        <section id="contacto" class="contacto-section py-16 px-6">
+            <h2 class="section-title text-2xl font-bold text-center mb-8" data-i18n="contact"></h2>
+            <p class="contacto-description text-center text-lg mb-8" data-i18n="contact_me"></p>
+            <form action="https://formspree.io/f/xpwpkgal" method="POST" class="formulario-contacto max-w-xl mx-auto p-8 bg-white shadow-lg rounded-lg">
+                <label for="nombre" class="block text-gray-700 mb-2" data-i18n="name"></label>
+                <input type="text" id="nombre" name="nombre" required class="w-full p-3 mb-4 border rounded-md">
+                <label for="email" class="block text-gray-700 mb-2" data-i18n="email"></label>
+                <input type="email" id="email" name="email" required class="w-full p-3 mb-4 border rounded-md">
+                <label for="mensaje" class="block text-gray-700 mb-2" data-i18n="message"></label>
+                <textarea id="mensaje" name="mensaje" rows="5" required class="w-full p-3 mb-4 border rounded-md"></textarea>
+                <button type="submit" class="w-full py-3 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition" data-i18n="send"></button>
+            </form>
         </section>
     </main>
 
-    <footer class="text-center p-4 bg-gray-200">
-        <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Footer -->
+    <footer class="footer bg-gray-200 py-6 text-center">
+        <p data-i18n="all_rights_reserved">&copy; <span id="current-year"></span> Natalia Santos Martínez.</p>
+      </footer>
+      
+    <script src="languages/lang.js"></script>
+    <script>
+        fetch('../partials/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+    
+            // Aquí colocamos lo que antes estaba en script.js
+            const languageSwitcher = document.getElementById('language-switcher');
+            if (languageSwitcher) {
+                languageSwitcher.addEventListener('change', (e) => {
+                    const lang = e.target.value;
+                    localStorage.setItem('lang', lang);
+                    translatePage(lang);
+                });
+    
+                const savedLang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+                languageSwitcher.value = savedLang;
+                translatePage(savedLang);
+            } else {
+                console.warn("No se encontró el #language-switcher");
+            }
+          })
+          .catch(err => console.error("Error cargando el navbar:", err));
+    </script>
+    
+
 </body>
 </html>

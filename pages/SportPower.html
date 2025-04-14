@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="description" content="SportPower es una aplicación web para facilitar la búsqueda de habitaciones en alquiler y compañeros de piso en España.">
+    <meta name="author" content="Tu Nombre">
+    <meta name="keywords" content="SportPower, aplicación web, búsqueda de habitaciones, alquiler, compañeros de piso, tecnología">
+    <title>SportPower - Proyecto</title>
+    <link rel="stylesheet" id="dynamic-css">
+    <script>
+        const timestamp = Date.now(); 
+        document.getElementById('dynamic-css').setAttribute('href', `../css/details.css?v=${timestamp}`);
+        
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Sección SportPower -->
+    <div id="SportPower" class="detalle-proyecto">
+        <div class="github-link-top">
+            <a href="https://github.com/NataliaSantosMart/SportPower" target="_blank" class="boton-icono">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <h3 class="detalle-titulo">SportPower</h3>
+        <img src="../images/SportPower.png" class="img-proyecto" />
+
+        <!-- Descripción -->
+        <div class="section">
+            <h4>Descripción</h4>
+            <p>
+                La aplicación web, desarrollada con Angular, está diseñada para la compra online de artículos deportivos y suplementos. El acceso se realiza a través de un sistema de autenticación, donde los usuarios registrados inician sesión con su correo electrónico y contraseña.
+<br></br>
+Los usuarios autenticados pueden gestionar sus pedidos, agregar productos a su lista de favoritos y añadir artículos al carrito de compras. Además, pueden realizar un seguimiento detallado del inventario, lo que asegura que siempre se conozca la disponibilidad de los productos.
+<br></br>
+Cada cliente tiene un perfil donde puede ver sus compras pasadas y personalizar sus preferencias. También, los usuarios pueden interactuar entre sí mediante comentarios tipo post en un foro comunitario, lo que permite compartir opiniones y experiencias sobre los productos.
+<br></br>
+Por otro lado, los administradores tienen acceso a herramientas para actualizar y gestionar el catálogo de productos, añadiendo, editando o eliminando artículos según sea necesario. Esto asegura que la tienda esté siempre actualizada con los productos disponibles para los usuarios.
+            </p>
+            
+        </div>
+
+        <!-- Tecnologías Utilizadas -->
+        <div class="section">
+            <h4>Tecnologías Utilizadas</h4>
+            <div class="tarjetas-tecnologias">
+                <div class="tarjeta-tecnologia">
+                    <p>Angular</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>Laravel</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>JavaScript</p>
+                </div> 
+                <div class="tarjeta-tecnologia">
+                    <p>MySQL</p>
+                </div>   
+                 <div class="tarjeta-tecnologia">
+                    <p>HTML</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>CSS</p>
+                </div>
+                <div class="tarjeta-tecnologia">
+                    <p>Material UI</p>
+                </div>  
+                <div class="tarjeta-tecnologia">
+                    <p>Figma</p>
+                </div>    
+            </div>
+        </div>
+
+        <!-- Sección de Documentación -->
+        <div class="section">
+            <h4>Documentación del Proyecto</h4>
+            <p>En esta sección podrás descargar los documentos relevantes del proyecto, como la memoria técnica en formato PDF y las diapositivas de la presentación en formato PPTX. Haz clic en los enlaces para obtener los archivos correspondientes.</p>
+            <div class="documentos">
+                <a href="../files/MemoriaSportPower.pdf" class="boton" download>
+                    <i class="fas fa-file-pdf"></i> Descargar Documentación (PDF)
+                </a>
+                <a href="../files/DiapositivasSportPower.pdf" class="boton" download>
+                    <i class="fas fa-file-powerpoint"></i> Descargar Diapositivas (PPTX)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../languages/lang.js"></script>
+    <script src="../languages/script.js"></script>
+</body>
+</html>
