@@ -11,47 +11,59 @@
     <meta name="author" content="Tu Nombre">
     <meta name="keywords" content="GetPet, aplicación web, búsqueda de habitaciones, alquiler, compañeros de piso, tecnología">
     <title>GetPet - Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" id="dynamic-css">
     <script>
         const timestamp = Date.now(); 
         document.getElementById('dynamic-css').setAttribute('href', `../css/details.css?v=${timestamp}`);
         
+        function showAndPlayVideo() {
+            // Mostrar el video
+            var video = document.getElementById('homeMateVideo');
+            var button = document.getElementById('playButton');
+            
+            // Cambiar el texto del botón y reproducir el video
+            button.style.display = 'none'; // Ocultar el botón
+            video.style.display = 'block'; // Mostrar el video
+            video.play(); // Reproducir el video
+        }
     </script>
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
+    
+    <div id="navbar-container"></div>
 
-    <div id="GetPet" class="detalle-proyecto">
-        <div class="github-link-top">
-            <a href="https://github.com/natttSantos/Protectoras" target="_blank" class="boton-icono">
-                <i class="fab fa-github"></i>
+    <!-- Sección GetPet -->
+    <div id="homeMate" class="detalle-proyecto relative"> 
+        <div class="github-link-top absolute top-4 right-1 z-10">
+            <a href="https://github.com/natttSantos/Protectoras" target="_blank" 
+               class="flex justify-center items-center p-3 bg-gray-800 text-white rounded-full shadow-lg transition-all duration-300 hover:bg-gray-700">
+                <i class="fab fa-github text-xl sm:text-2xl"></i>
             </a>
         </div>
-        <h3 class="detalle-titulo">GetPet</h3>
+
+        <h3 class="detalle-titulo text-4xl font-semibold">GetPet</h3>
         <img src="../images/GetPet.png" class="img-proyecto-movil" />
-
-        <div class="section">
-            <h4 data-i18n="description"></h4>
-            <p>
-                GetPet es una aplicación móvil desarrollada para la adopción de animales. Esta app tiene como objetivo ayudar a las protectoras y a los apoptantes, pero sobre todo ayudar a los verdaderos protagonistas de todo esto, los animales. <br><br>
-
-Ayudar a las protectoras porque gracias a GetPet recibirán de forma unificada las diferentes solicitudes de adopción, junto con una gran cantidad de información del adoptante, para así agilizar el proceso y poder descartar o elegir de manera más rápida y correcta. Además, recibirán avisos de los animales o camadas que se encuentren en la calle, de una forma rápida y con unos datos precisos para así poder actuar de la mejor forma posible. Los usuarios que quieran adoptar, tendrán una lista unificada de todos los animales en adopción de la zona, evitando así tener que navegar entre distintas páginas de protectoras que normalmente no tienen unas opciones de búsqueda muy completas. 
-
-<br><br>Y por supuesto ayudar a los animales. Nuestro fin es que todos los animales de compañia puedan tener ese hogar que tanto merecen y se ha trabajado para hacerlo posible.
-            </p>
-            
+        
+          <!-- Descripción -->
+          <div class="section mt-10 mb-10">
+            <h4 class="font-bold mb-2" data-i18n="description"></h4>
+            <p data-i18n-html="description_app_getpet"></p>
         </div>
 
         <!-- Tecnologías Utilizadas -->
-        <div class="section">
-            <h4>Tecnologías Utilizadas</h4>
+        <div class="section mt-10">
+            <h4 class="font-bold mb-4" data-i18n="technologies"></h4>
             <div class="tarjetas-tecnologias">
                 <div class="tarjeta-tecnologia">
                     <p>React Native</p>
                 </div>
                 <div class="tarjeta-tecnologia">
                     <p>JavaScript</p>
-                </div>  
+                </div> 
                 <div class="tarjeta-tecnologia">
                     <p>HTML</p>
                 </div>  
@@ -60,27 +72,57 @@ Ayudar a las protectoras porque gracias a GetPet recibirán de forma unificada l
                 </div> 
                 <div class="tarjeta-tecnologia">
                     <p>Firebase</p>
-                </div>    
-                 <div class="tarjeta-tecnologia">
+                </div>  
+                <div class="tarjeta-tecnologia">
                     <p>Figma</p>
-                </div>
+                </div>    
             </div>
         </div>
 
         <!-- Sección de Documentación -->
-        <div class="section">
-            <h4>Documentación del Proyecto</h4>
-            <p>En esta sección podrás descargar una presentación del proyeco en formato PDF. Haz clic en el enlace para obtener el archivo correspondiente.</p>
-            <div class="documentos">
-                <a href="../files/DiapositivasGetPet.pdf" class="boton" download>
-                    <i class="fas fa-file-pdf"></i> Descargar Presentación (PDF)
+        <div class="section mt-10 mb-10">
+            <h4 class="font-bold mb-2" data-i18n="project_documentation"></h4>
+            <p data-i18n="project_documentation_info"></p>
+            <div class="documentos mt-4">
+                <a href="../files/MemoriaSpendTogether.pdf" class="boton" download>
+                    <i class="fas fa-file-pdf"></i>
+                    <span data-i18n="download_documentation"></span>
+                </a>
+                <a href="../files/DiapositivasSpendTogether.pdf" class="boton" download>
+                    <i class="fas fa-file-powerpoint"></i> 
+                    <span data-i18n="download_slides"></span>
                 </a>
             </div>
         </div>
     </div>
 
     <script src="../languages/lang.js"></script>
-    <script src="../languages/script.js"></script>
+
+    <script>
+        fetch('../partials/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+    
+            // Aquí colocamos lo que antes estaba en script.js
+            const languageSwitcher = document.getElementById('language-switcher');
+            if (languageSwitcher) {
+                languageSwitcher.addEventListener('change', (e) => {
+                    const lang = e.target.value;
+                    localStorage.setItem('lang', lang);
+                    translatePage(lang);
+                });
+    
+                const savedLang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+                languageSwitcher.value = savedLang;
+                translatePage(savedLang);
+            } else {
+                console.warn("No se encontró el #language-switcher");
+            }
+          })
+          .catch(err => console.error("Error cargando el navbar:", err));
+    </script>
+    
 
 </body>
 </html>

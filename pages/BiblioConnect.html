@@ -11,6 +11,8 @@
     <meta name="author" content="Tu Nombre">
     <meta name="keywords" content="BiblioConnect, aplicación web, búsqueda de habitaciones, alquiler, compañeros de piso, tecnología">
     <title>BiblioConnect - Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" id="dynamic-css">
     <script>
         const timestamp = Date.now(); 
@@ -18,7 +20,7 @@
         
         function showAndPlayVideo() {
             // Mostrar el video
-            var video = document.getElementById('BiblioConnectVideo');
+            var video = document.getElementById('homeMateVideo');
             var button = document.getElementById('playButton');
             
             // Cambiar el texto del botón y reproducir el video
@@ -27,71 +29,51 @@
             video.play(); // Reproducir el video
         }
     </script>
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
+    
+    <div id="navbar-container"></div>
 
     <!-- Sección BiblioConnect -->
-    <div id="BiblioConnect" class="detalle-proyecto">
-        <div class="github-link-top">
-            <a href="https://github.com/natttSantos/BiblioConnect" target="_blank" class="boton-icono">
-                <i class="fab fa-github"></i>
+    <div id="biblioconnect" class="detalle-proyecto relative"> 
+        <div class="github-link-top absolute top-4 right-1 z-10">
+            <a href="https://github.com/natttSantos/BiblioConnect" target="_blank" 
+               class="flex justify-center items-center p-3 bg-gray-800 text-white rounded-full shadow-lg transition-all duration-300 hover:bg-gray-700">
+                <i class="fab fa-github text-xl sm:text-2xl"></i>
             </a>
         </div>
-        <h3 class="detalle-titulo">BiblioConnect</h3>
+
+        <h3 class="detalle-titulo text-4xl font-semibold">BiblioConnect</h3>
         <img src="../images/BiblioConnect.png" class="img-proyecto" />
 
-        <div class="section">
-            <h4>Demo proyecto</h4>
-            <p>En esta sección puedes ver una demostración de cómo funciona la aplicación BiblioConnect. Haz clic en el botón "Reproducir Demo" para ver una presentación en vivo del funcionamiento de la plataforma y sus principales características.</p>
+        <div class="sectio mt-10 mb-4">
+            <h4 class="font-bold mb-2" data-i18n="demo_project"></h4>
+            <p data-i18n="play_demo_info"></p>
         </div>
         
-        <!-- Botón para mostrar y reproducir el video -->
         <div class="section-video">
             <button id="playButton" class="boton" onclick="showAndPlayVideo()">
-                <i class="fas fa-play"></i> Reproducir Demo
+                <i class="fas fa-play"></i>
+                <span data-i18n="play_demo_button"></span>
             </button>
             
-            
-            <!-- Video oculto inicialmente -->
-            <video id="BiblioConnectVideo" class="video-proyecto" controls style="display: none;">
-                <source src="/files/demoBiblioConnect.mp4" type="video/mp4">
+            <video id="homeMateVideo" class="video-proyecto" controls style="display: none;">
+                <source src="/files/videoBiblioConnect.mp4" type="video/mp4">
                 Tu navegador no soporta el formato de video.
             </video>
         </div>
 
-        <!-- Descripción -->
-        <div class="section">
-            <h4>Descripción</h4>
-            <p>El propósito de llevar a cabo este proyecto tiene dos enfoques fundamentales. Por un lado,
-                busca la aplicación práctica de gran parte de los conocimientos obtenidos a lo largo de la
-                formación universitaria. Por otro lado, busca abordar una necesidad existente en una parte de la
-                sociedad, específicamente en lo relacionado con la obtención de libros en las bibliotecas públicas.<br></br>
-                
-                BiblioConnect es una aplicación web diseñada para mejorar el acceso y la gestión de libros en
-                las bibliotecas públicas de la Comunidad Valenciana. La iniciativa surge con la intención de
-                fomentar la lectura en su formato físico, al mismo tiempo que se agiliza el proceso de acceso a
-                los recursos de lectura. <br></br>
-                
-                La aplicación se compone de dos sesiones: una para lectores y otra para administradores de
-                bibliotecas. Los administradores tienen la capacidad de gestionar eventos y libros, mientras que
-                los lectores pueden conocer su disponibilidad y solicitar sus recursos. Las funcionalidades se
-                complementan con notificaciones y opciones de filtrado, mejorando la experiencia del usuario.<br></br>
-               
-                El sistema busca simplificar el acceso a los diferentes recursos educativos y culturales. La
-                centralización de información en una única aplicación y la eliminación de barreras para acceder
-                a recursos benefician tanto a los administradores de bibliotecas como a los lectores.<br></br>
-                
-                Las tecnologías usadas en el desarrollo de este sistema han sido ASP.NET y C# para manejar
-                la lógica del servidor, HTML para la definición de la estructura y el contenido de las páginas web,
-                SQL Server para el almacenamiento de datos y JavaScript para gestionar la interacción del usuario
-                con la interfaz web. Como entorno de desarrollo para la implementación y diseño de la aplicación
-                se ha utilizado Visual Studio. <br></br>
+          <!-- Descripción -->
+          <div class="section mt-10 mb-10">
+            <h4 class="font-bold mb-2" data-i18n="description"></h4>
+            <p data-i18n-html="description_app_biblioconnect"></p>
         </div>
 
         <!-- Tecnologías Utilizadas -->
-        <div class="section">
-            <h4>Tecnologías Utilizadas</h4>
+        <div class="section mt-10">
+            <h4 class="font-bold mb-4" data-i18n="technologies"></h4>
             <div class="tarjetas-tecnologias">
                 <div class="tarjeta-tecnologia">
                     <p>ASP.NET</p>
@@ -107,39 +89,66 @@
                 </div>
                 <div class="tarjeta-tecnologia">
                     <p>Firebase</p>
-                </div> 
-                <div class="tarjeta-tecnologia">
-                    <p>HTML</p>
                 </div>   
                 <div class="tarjeta-tecnologia">
-                    <p>CSS</p>
+                    <p>HTML</p>
                 </div>  
+                <div class="tarjeta-tecnologia">
+                    <p>CSS</p>
+                </div>
                 <div class="tarjeta-tecnologia">
                     <p>Bootstrap</p>
-                </div>    
+                </div>  
                 <div class="tarjeta-tecnologia">
                     <p>Figma</p>
-                </div>  
+                </div>    
             </div>
         </div>
 
         <!-- Sección de Documentación -->
-        <div class="section">
-            <h4>Documentación del Proyecto</h4>
-            <p>En esta sección podrás descargar los documentos relevantes del proyecto, como la memoria técnica en formato PDF y las diapositivas de la presentación en formato PPTX. Haz clic en los enlaces para obtener los archivos correspondientes.</p>
-            <div class="documentos">
+        <div class="section mt-10 mb-10">
+            <h4 class="font-bold mb-2" data-i18n="project_documentation"></h4>
+            <p data-i18n="project_documentation_info"></p>
+            <div class="documentos mt-4">
                 <a href="../files/MemoriaBiblioConnect.pdf" class="boton" download>
-                    <i class="fas fa-file-pdf"></i> Descargar Documentación (PDF)
+                    <i class="fas fa-file-pdf"></i>
+                    <span data-i18n="download_documentation"></span>
                 </a>
                 <a href="../files/DiapositivasBiblioConnect.pdf" class="boton" download>
-                    <i class="fas fa-file-powerpoint"></i> Descargar Diapositivas (PDF)
+                    <i class="fas fa-file-powerpoint"></i> 
+                    <span data-i18n="download_slides"></span>
                 </a>
             </div>
         </div>
     </div>
 
     <script src="../languages/lang.js"></script>
-    <script src="../languages/script.js"></script>
+
+    <script>
+        fetch('../partials/navbar.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+    
+            // Aquí colocamos lo que antes estaba en script.js
+            const languageSwitcher = document.getElementById('language-switcher');
+            if (languageSwitcher) {
+                languageSwitcher.addEventListener('change', (e) => {
+                    const lang = e.target.value;
+                    localStorage.setItem('lang', lang);
+                    translatePage(lang);
+                });
+    
+                const savedLang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
+                languageSwitcher.value = savedLang;
+                translatePage(savedLang);
+            } else {
+                console.warn("No se encontró el #language-switcher");
+            }
+          })
+          .catch(err => console.error("Error cargando el navbar:", err));
+    </script>
+    
 
 </body>
 </html>

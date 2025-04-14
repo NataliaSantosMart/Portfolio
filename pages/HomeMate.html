@@ -37,13 +37,15 @@
     <div id="navbar-container"></div>
 
     <!-- Sección HomeMate -->
-    <div id="homeMate" class="detalle-proyecto">
-        <div class="github-link-top">
-            <a href="https://github.com/NataliaSantosMart/HomeMate" target="_blank" class="boton-icono">
-                <i class="fab fa-github"></i>
+    <div id="homeMate" class="detalle-proyecto relative"> 
+        <div class="github-link-top absolute top-4 right-1 z-10">
+            <a href="https://github.com/NataliaSantosMart/HomeMate" target="_blank" 
+               class="flex justify-center items-center p-3 bg-gray-800 text-white rounded-full shadow-lg transition-all duration-300 hover:bg-gray-700">
+                <i class="fab fa-github text-xl sm:text-2xl"></i>
             </a>
         </div>
-        <h3 class="detalle-titulo">HomeMate</h3>
+
+        <h3 class="detalle-titulo text-4xl font-semibold">HomeMate</h3>
         <img src="../images/HomeMate.png" class="img-proyecto" />
 
         <div class="sectio mt-10 mb-4">
@@ -53,7 +55,8 @@
         
         <div class="section-video">
             <button id="playButton" class="boton" onclick="showAndPlayVideo()">
-                <i class="fas fa-play" data-i18n="play_demo_button"></i> 
+                <i class="fas fa-play"></i>
+                <span data-i18n="play_demo_button"></span>
             </button>
             
             <video id="homeMateVideo" class="video-proyecto" controls style="display: none;">
@@ -108,10 +111,12 @@
             <p data-i18n="project_documentation_info"></p>
             <div class="documentos mt-4">
                 <a href="../files/MemoriaHomeMate.pdf" class="boton" download>
-                    <i class="fas fa-file-pdf" data-i18n="download_documentation"></i>
+                    <i class="fas fa-file-pdf"></i>
+                    <span data-i18n="download_documentation"></span>
                 </a>
                 <a href="../files/DiapositivasHomeMate.pdf" class="boton" download>
-                    <i class="fas fa-file-powerpoint" data-i18n="download_slides"></i> 
+                    <i class="fas fa-file-powerpoint"></i> 
+                    <span data-i18n="download_slides"></span>
                 </a>
             </div>
         </div>

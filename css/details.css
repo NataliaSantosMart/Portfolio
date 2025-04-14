@@ -73,7 +73,7 @@ body {
 
 .img-proyecto-movil {
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     display: block;
     margin: 0 auto;
 }
@@ -132,7 +132,7 @@ h4 {
     margin-top: 20px;
     border: none; 
     outline: none; 
-    font-family: 'Arial', sans-serif;
+    font-family: 'Tahoma', sans-serif !important; 
     font-style: normal !important;
 }
 
