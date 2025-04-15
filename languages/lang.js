@@ -35,6 +35,7 @@ const translations = {
       project_documentation_info: "En esta sección podrás descargar los documentos relevantes del proyecto, como la memoria técnica en formato PDF y las diapositivas de la presentación en formato PPTX. Haz clic en los enlaces para obtener los archivos correspondientes.", 
       download_documentation: "Descargar documentación (PDF)", 
       download_slides: "Descargar diapositivas (PDF)", 
+      find_me_at: "Puedes encontrarme en:", 
 
       //HOMEMATE
       play_demo_info: "En esta sección puedes ver una demostración de cómo funciona la aplicación HomeMate. Haz clic en el botón 'Reproducir Demo' para ver una presentación en vivo del funcionamiento de la plataforma y sus principales características.", 
@@ -114,6 +115,7 @@ const translations = {
       project_documentation_info: "In this section, you can download the relevant project documents, such as the technical report in PDF format and the presentation slides in PPTX format. Click the links to download the corresponding files.",
       download_documentation: "Download documentation (PDF)",
       download_slides: "Download slides (PDF)", 
+      find_me_at: "You can find me at:", 
 
       //HOMEMATE
       play_demo_info: "In this section, you can watch a demonstration of how the HomeMate application works. Click the 'Play Demo' button to see a live presentation of the platform's functionality and main features.",

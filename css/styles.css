@@ -351,20 +351,26 @@ body {
 
 /*Contacto*/
 
+/* Sección de contacto */
 .contacto-section {
     padding: 3rem 1.5rem;
-    margin-top: 6rem;
-    width: 700px;
+    margin-top: 4rem;
+    width: 100%; /* Usar el 100% del ancho disponible */
+    max-width: 700px; /* Limitar el ancho máximo a 700px */
 }
 
+/* Descripción del formulario */
 .contacto-description {
     font-size: 1.125rem;
     color: #6B7280;
     margin-bottom: 2rem;
+    text-align: center; /* Centrar el texto */
 }
 
+/* Contenedor del formulario */
 .formulario-contacto {
-    max-width: 900px;
+    width: 100%; /* Usar el 100% del ancho disponible */
+    max-width: 900px; /* Limitar el ancho máximo */
     margin: 2rem auto;
     margin-top: 60px;
     padding: 2rem;
@@ -375,6 +381,7 @@ body {
     flex-direction: column;
 }
 
+/* Estilo de los labels */
 .formulario-contacto label {
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -382,8 +389,10 @@ body {
     font-size: 14px;
 }
 
+/* Estilo de los inputs y textarea */
 .formulario-contacto input,
 .formulario-contacto textarea {
+    width: 100%; /* Hacer que ocupen el 100% del contenedor */
     margin-bottom: 1.5rem;
     padding: 0.75rem;
     border: 1px solid #d6d6d6;
@@ -392,10 +401,26 @@ body {
     resize: vertical;
 }
 
+/* Estilo para la descripción del formulario */
 .contacto-description {
     text-align: center;
     margin-bottom: 1rem;
     color: #666;
+}
+
+/* Añadir media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contacto-section {
+        padding: 2rem 1rem;
+    }
+
+    .formulario-contacto {
+        padding: 1.5rem;
+    }
+
+    .contacto-description {
+        font-size: 1rem; /* Reducir el tamaño de fuente */
+    }
 }
 
 
